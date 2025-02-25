@@ -1,59 +1,42 @@
-# Ticket Support Management API with Analytics Dashboard
+# Simple Task Manager
 
-## Project Overview
+A lightweight task management web application built using Spring Boot, JPA, and PostgreSQL (or H2 for in-memory testing). This project provides RESTful endpoints for user registration and ticket management (creating, updating, deleting, and retrieving tickets). Developed with Postman for API testing and Frontend replication. Power BI to demonstrate data visualisation.
 
-This project blends **backend API development** with **business analytics** to efficiently manage tasks and IT support tickets while extracting actionable insights through analytics dashboards.
+## Features
 
----
+- **User Registration:**  
+  Users can sign up with a username, password, role (e.g., STUDENT, ADMIN, STAFF), and an optional status.
+  
+- **Ticket Management:**  
+  Users (students) can create enquiries/tickets which are assigned to an admin or staff member.  
+  Admin/Staff can update any ticket (including reporter and assignee changes) while students are limited to updating their own ticket details.
 
-## Goal  
-Combine robust backend infrastructure with insightful data visualisation to streamline task and ticket management workflows.
+- **Automated Data Seeding:**  
+  Optionally seed the database with test data via an SQL script or programmatic seeding using an `ApplicationRunner`.
 
----
+- **API Testing:**  
+  Use Postman to easily test all endpoints.
 
-## Key Features  
+- **Data Visualization:**  
+  Export or connect the application's database to Power BI to create interactive dashboards.
 
-### **1. Backend API Development**
-- Developed using **Spring Boot**.
-- **Structured Data Storage:** PostgreSQL for relational data.
-- **Unstructured Data Handling:** MongoDB for flexible storage needs.
-- **Role-Based Access Control:** Implemented **JWT Authentication** for Admin and Manager roles.
+## Technologies Used
 
-### **2. Analytics Dashboard**
-- **Task Trends Visualization:** Built with **Tableau/Power BI** to display task completion trends.
-- **IT Support Insights:** Analyze recurring issue patterns and ticket resolution efficiency.
+- **Spring Boot** – Rapid application development and dependency management.
+- **Spring Data JPA** – ORM support and database persistence.
+- **Jakarta Bean Validation** – For input validations using annotations like `@NotBlank` and `@NotNull`.
+- **Lombok** – To reduce boilerplate code (optional).
+- **PostgreSQL / PgAdmin** – Database support (PostgreSQL for production; H2 for in-memory testing).
+- **Postman** – For API testing.
+- **Power BI** – For creating visual dashboards from your data.
 
-### **3. Deployment**
-- Hosted on **AWS EC2** for scalability and reliability.
-- Ensures secure configurations and access control.
+## Getting Started
 
----
+### Prerequisites
 
-## Technology Stack  
-- **Backend:** Java (Spring Boot)  
-- **Databases:** PostgreSQL, MongoDB  
-- **Authentication:** JWT Authentication  
-- **Analytics:** Tableau / Power BI  
-- **Deployment:** AWS EC2  
+- Java 17 or later
+- Maven 3.x
+- PostgreSQL (if using PostgreSQL) or H2 in-memory (default configuration)
+- Postman for API testing
+- Power BI Desktop (optional, for visualization)
 
----
-
-## Outcome  
-A robust backend system paired with analytics dashboards that provide actionable insights for effective task and IT support management.
-
----
-
-## ⚙️ **Setup and Installation**
-
-### Prerequisites  
-- Java 17  
-- Maven  
-- PostgreSQL  
-- MongoDB  
-
-### Steps to Run Locally
-
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/yourusername/project-repo.git
-   cd project-repo

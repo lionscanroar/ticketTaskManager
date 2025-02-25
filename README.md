@@ -38,5 +38,5 @@ A lightweight task management web application built using Spring Boot, JPA, and 
 - Maven 3.x
 - PostgreSQL (if using PostgreSQL) or H2 in-memory (default configuration)
 - Postman for API testing
-- Power BI Desktop (optional, for visualization)
+- Power BI Desktop (optional, for visualisation)
 
